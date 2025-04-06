@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbun - Language Learning</title>
+    <script defer src="script.js"></script>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('oi.jpg') no-repeat center center/cover;
+            color: #333;
+        }
+
+        /* Glass Effect for Navbars */
+        .top-navbar, .main-navbar {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+        }
+
+        .top-navbar:hover, .main-navbar:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* First Navbar (Language Selection) */
+        .top-navbar {
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* Second Navbar (Main Navigation) */
+        .main-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #073B4C;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FFD166;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-outline {
+            padding: 10px 20px;
+            border: 2px solid #073B4C;
+            color: #073B4C;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .btn-outline:hover {
+            background: #073B4C;
+            color: white;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            background: #FFD166;
+            color: #073B4C;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .btn-primary:hover {
+            background: #E0B14A;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background: url('hero-background.jpg') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 600px;
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 32px;
+            background: #FFD166;
+            color: #073B4C;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #E0B14A;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- First Navbar -->
+    <div class="top-navbar">
+        Want to see this page in English?
+    </div>
+
+    <!-- Second Navbar -->
+    <header class="main-navbar">
+        <div class="logo">Verbun</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">For Individuals</a></li>
+                <li><a href="#">For Businesses</a></li>
+                <li><a href="#">For Schools</a></li>
+            </ul>
+        </nav>
+        <div class="nav-buttons">
+            <a href="#" class="btn-outline">Sign In</a>
+            <a href="#" class="btn-primary">Join Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Learn Languages Globally</h2>
+            <p>Connect with the world through languages. Enhance your skills and explore new cultures.</p>
+            <a href="#" class="cta-button">Start Learning</a>
+        </div>
+    </section>
+</body>
+</html>

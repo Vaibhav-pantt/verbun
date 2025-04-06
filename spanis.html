@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verbun - Learn Spanish</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">Verbun</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#flashcards">Flashcards</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="toggle-btn" onclick="toggleLanguage()">Español</button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <h1 id="hero-text">Learn Spanish with Verbun</h1>
+  </section>
+
+  <section class="section" id="courses">
+    <div class="glass-card">
+      <h2 id="courses-title">Explore Our Courses</h2>
+      <p id="courses-desc">Designed to help you master Spanish from beginner to advanced level.</p>
+    </div>
+  </section>
+
+  <section class="section" id="flashcards">
+    <h2 id="flashcard-title">Vocabulary Flashcards</h2>
+    <div class="flashcard-grid">
+      <div class="flashcard">
+        <div class="card-inner">
+          <div class="card-front">Hola</div>
+          <div class="card-back">Hello</div>
+        </div>
+      </div>
+      <div class="flashcard">
+        <div class="card-inner">
+          <div class="card-front">Gracias</div>
+          <div class="card-back">Thank You</div>
+        </div>
+      </div>
+      <div class="flashcard">
+        <div class="card-inner">
+          <div class="card-front">Casa</div>
+          <div class="card-back">House</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="glass-card">
+      <h2 id="contact-title">Contact Us</h2>
+      <p id="contact-desc">Got questions? Need help getting started? Let’s talk!</p>
+      <div class="cta">
+        <a href="mailto:hello@verbun.com">Send Email</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

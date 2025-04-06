@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 20px 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ffd54f, 0 0 20px #ff4081;
+    color: #fff;
+  }
+  
+  .flashcard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 40px;
+  }
+  
+  .flashcard {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .flashcard:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  }
+  
+  .flashcard .actions {
+    margin-top: 15px;
+  }
+  
+  button {
+    padding: 10px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  button.edit {
+    background: linear-gradient(45deg, #ffd54f, #ffb300);
+    color: #000;
+  }
+  
+  button.delete {
+    background: linear-gradient(45deg, #ef5350, #e53935);
+    color: #fff;
+  }
+  
+  #card-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 20px;
+  }
+  
+  #card-form input {
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: none;
+    width: 220px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+  }
+  
+  #card-form input::placeholder {
+    color: #ddd;
+  }
+  
+  #card-form input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+  }
+  
+  #card-form button {
+    background: linear-gradient(to right, #66bb6a, #43a047);
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  #card-form button:hover {
+    background: linear-gradient(to right, #81c784, #66bb6a);
+  }
+  

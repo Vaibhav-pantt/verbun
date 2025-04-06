@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Language - Verbun</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>Select a Language</h1>
+    </header>
+    <section class="language-selection">
+        <div class="language-option" onclick="selectLanguage('English')">English</div>
+        <div class="language-option" onclick="selectLanguage('Spanish')">Español</div>
+        <div class="language-option" onclick="selectLanguage('French')">Français</div>
+        <div class="language-option" onclick="selectLanguage('Chinese')">中文</div>
+        <div class="language-option" onclick="selectLanguage('German')">Deutsch</div>
+    </section>
+    <script>
+        function selectLanguage(language) {
+            alert("You selected " + language);
+            // Redirect to the respective course page (replace with actual logic)
+            window.location.href = "course.html?lang=" + language;
+        }
+    </script>
+</body>
+</html>
