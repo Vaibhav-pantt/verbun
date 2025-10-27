@@ -1,0 +1,753 @@
+/* General Reset */
+/* Only keep one: */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* General Reset */
+.classic-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  color: #df1c1cb1;
+  padding: 5px 0;
+  border-bottom: 2px solid #d5b042;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(39, 52, 52, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Optional: blurred background */
+}
+
+  
+  
+  .classic-header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    color: #eeb816;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #090303;
+    font-size: 1rem;
+    font-family: 'Times New Roman', serif;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 0%;
+    background-color: #0dbbe286;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: #030404;
+  }
+  
+  .nav-links li a:hover::after,
+  .nav-links li a.active::after {
+    width: 100%;
+  }
+  
+/* Apply a soft gray background */
+body {
+    background: #46e6ff76;
+    color: #256074;
+    font-family: sans-serif;
+    padding: 0rem;
+    font-family: 'Inter', sans-serif;
+}
+#fs {
+    width: 99vw;
+    height: 99vh;
+    margin: 2rem auto;
+    padding: 3em;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.15); /* Glass-like translucent white */
+    backdrop-filter: blur(14px); /* Glass blur */
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+
+    background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/crashing-surf-and-keyhole-arch-pfeiffer-beach-david-gubernick.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+#fs::before {
+    content: none; /* No more overlay or blur effect */
+}
+
+#fs > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Glassmorphism effect */
+
+.hero-glass {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(159, 230, 250, 0.15);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(141, 34, 34, 0.3);
+  transition: transform 0.4s ease, background 0.3s;
+}
+.hero-glass h2 {
+color: rgba(246, 230, 10, 0.975);
+/* bright gold color */
+}
+
+.hero-glass p {
+color: #ffffff; /* white color */
+}
+
+.hero-glass:hover {
+  transform: scale(1.02);
+  background: rgba(76, 211, 234, 0.977);
+}
+
+
+
+/* Header */
+header {
+  background: rgba(14, 67, 82, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(2px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(188, 50, 50);
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Warm hover effect */
+nav ul li a:hover {
+  background: #cbb172;
+  color: #073B4C;
+}
+
+/* Hero Section */
+.hero {
+  height: 150vh;
+  background: #F4F4F4;
+  color: #000000;
+  text-align: center;
+  padding-top: 120px;
+}
+
+.hero h2 {
+
+  font-size: 5rem;
+  margin-top: 30px;
+}
+
+.hero p {
+  font-size: 5rem;
+}
+
+/* Call-to-action button */
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #073B4C;
+  background: linear-gradient(135deg, #FFD166, #FFB703);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #FFC300, #bd7d2fd0);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.language-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be') no-repeat center/cover;
+}
+
+.language-glass {
+  max-width: 700px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.lang-flag {
+  width: 100px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.language-glass h2 {
+  color: green;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.language-glass p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.lang-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.lang-features li {
+  margin: 10px 0;
+  font-size: 1.05em;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #f7b733;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #fc4a1a;
+  color: #fff;
+}
+
+
+.lang-features li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(127, 1, 1); /* Light golden color */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: calc(var(--i) * 0.15s);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.lang-features li:hover {
+  transform: scale(1.05);
+  color: #f7b733; /* Bright orange on hover */
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* General Section Styles */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+/* Cinema Section Styling */
+.cinema-section {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(178, 34, 34, 0.8)); /* Black to classic red */
+  padding: 50px 20px;
+}
+
+
+.cinema-section h2 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Georgia', serif;
+}
+
+.cinema-section p {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.cinema-grid {
+  display: flex; /* Use flexbox for horizontal scrolling */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Space between items */
+  padding: 20px 0; /* Add padding to the top and bottom */
+}
+
+.cinema-card {
+  flex-shrink: 0; /* Prevent shrinking of cards */
+  width: 300px; /* Set a fixed width for the cards */
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cinema-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cinema-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.cinema-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.cinema-card p {
+  font-size: 1em;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/* Container for left-right layout */
+.container {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Make it responsive */
+}
+/* Wrapper for the movie section */
+.wrapper-movie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 40px; /* Space between text and image */
+}
+
+/* Intro section style */
+.intro-movie {
+  flex: 1;
+  text-align: left;
+  font-size: 1.2em;
+  color: #dbcc06;
+  line-height: 1.6;
+}
+/* Change to deep red */
+.intro-movie p {
+  color: #2ae60c; /* Deep Red */
+}
+
+
+
+/* Profile section style (image) */
+.profile-movie {
+  flex: 1;
+  text-align: center;
+}
+
+/* Image style for profile */
+.profile-movie img {
+  width: 100%;
+  max-width: 400px; /* Keeps the image within a reasonable size */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds shadow for 3D effect */
+}
+
+
+.cinema-info {
+  background-image: url('https://images.unsplash.com/photo-1607082349566-1873429d8bb3'); /* Example image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; /* Ensures text is readable on a dark image */
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+  max-width: 900px;
+  margin-inline: auto;
+  backdrop-filter: brightness(0.7); /* Optional: dims the image for better text contrast */
+}
+
+.cinema-info p,
+.cinema-info li {
+  background: rgba(0, 0, 0, 0.4); /* Optional: subtle dark overlay on text */
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+
+.cinema-info ul {
+  padding-left: 20px;
+}
+
+.cinema-info li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.cinema-info strong {
+  color: #d62828;
+}
+
+.cinema-info em {
+  font-style: italic;
+  color: #6a4c93;
+}
+
+  /* Overall section style */
+#italian-culture {
+  background-color: #f8f8f8;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Glass effect container */
+.glass-ict {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Title style */
+h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+/* Paragraph description style */
+p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Culture content */
+.culture {
+  margin-top: 30px;
+}
+
+/* Heading for individual culture section */
+.culture h3 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+/* Paragraph under each culture */
+.culture p {
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Image style */
+.culture img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+/* Wrapper for flexbox layout */
+.wrapper {
+  padding: 0 15%;
+  display: flex;
+  flex-wrap: wrap; /* Allows content to wrap to the next line on smaller screens */
+  align-items: center; /* Vertically centers items */
+  justify-content: space-around; /* Distributes items with space around them */
+  gap: 5rem; /* Adds space between the items */
+   margin-bottom: 60px;
+}
+
+/* Intro section styling */
+.intro {
+  flex: 1; /* Takes up remaining space in the flex container */
+  text-align: left; /* Aligns text to the left */
+   flex: 0 0 55%; /* Text takes 55% of space */
+}
+.profile {
+  flex: 0 0 40%; /* Image takes 40% of space */
+}
+
+
+.intro h3 {
+ font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.intro p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Profile section styling */
+.profile {
+  flex: 1; /* Ensures the profile image takes up equal space */
+  text-align: center; /* Centers the image horizontally */
+  
+}
+
+.profile img {
+  width: 100%; /* Makes the image responsive */
+  max-width: 400px; /* Ensures the image doesn't stretch too wide */
+  height: auto; /* Keeps the image aspect ratio intact */
+  border-radius: 8px; /* Rounds the corners of the image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect */
+}
+
+.grammar-vocab {
+  padding: 40px 20px;
+  background-image: url('https://www.artesvelata.it/wp-content/uploads/2018/11/Cattedrale-di-Santa-Maria-del-Fiore-a-Firenze-1296-1470.-Veduta-latrale.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  color: #fff; /* Ensures text is readable on the background */
+}
+
+.grammar-vocab h2 {
+  text-align: center;
+  font-size: 2.6em;
+  color: #ffffff; /* Light color for better contrast against background */
+  margin-bottom: 25px;
+  font-family: 'Georgia', serif;
+}
+
+.grammar-vocab p {
+  font-size: 1.4em;
+  color: #20221f; /* White text for readability */
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  text-align: center;
+  padding: 15px;
+  background: rgba(128, 7, 7, 0.253); /* Dark overlay for better contrast */
+  border-radius: 12px;
+}
+
+.grammar-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.grammar-box,
+.vocab-box {
+  flex: 1;
+  min-width: 300px;
+ backdrop-filter: blur(3px);
+  background: rgba(236, 6, 6, 0.08);
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1), 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.grammar-box:hover,
+.vocab-box:hover {
+  transform: translateY(-5px);
+  background-color: rgba(238, 22, 101, 0.12);
+}
+
+.grammar-box h3,
+.vocab-box h3 {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: rgb(13, 13, 12);
+  letter-spacing: 0.5px;
+}
+/* General styling for the list items */
+.grammar-box li,
+.vocab-box li {
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 18px;
+  line-height: 1.8;
+  padding-left: 35px;
+  position: relative;
+  font-size: 1.2rem;
+  color: #f9f7f4;
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+/* Icon styling for each list item */
+.grammar-box li::before,
+.vocab-box li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.4rem;
+}
+
+.grammar-box li::before {
+  
+  color: #58e000;
+}
+
+.vocab-box li::before {
+
+  color: #ffce52;
+}
+
+/* Styling for strong text */
+.grammar-box strong,
+.vocab-box strong {
+  color: #ffd60a;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effect */
+.grammar-box li:hover,
+.vocab-box li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* Make the anchor tag remove underline */
+.grammar-box li a,
+.vocab-box li a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+  display: block; /* Make the anchor tag take the full width of the list item */
+}
+
+/* Hover effect on anchor tag */
+.grammar-box li a:hover,
+.vocab-box li a:hover {
+  color: #d81f26; /* Change the color when hovered */
+}
+
+
+@media (max-width: 768px) {
+  .grammar-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .grammar-vocab h2 {
+    font-size: 2em;
+  }
+
+  .grammar-vocab p {
+    font-size: 1.2em;
+  }
+}

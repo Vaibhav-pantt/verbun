@@ -1,0 +1,418 @@
+/* Import fonts */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* Base styles for header */
+.classic-header {
+  background-color: rgba(90, 84, 80, 0.862); /* Slightly transparent background */
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fixes the header at the top */
+  top: 0;
+  left: 0;
+  padding-bottom: 1px; 
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensures the navbar stays on top of other content */
+  transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Header content */
+.header-content {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 35.4px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: rgba(240, 131, 15, 0.868);
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease; /* Hover effects */
+}
+
+.nav-links li a:hover {
+  color: #ffcd3c; /* Gold color on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Glassmorphism Effect on Scroll */
+.classic-header.glassmorph {
+  background: rgba(1, 1, 1, 0.6); /* More transparent background for the effect */
+  backdrop-filter: blur(2px); /* Glassmorphism blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  box-shadow: 0 4px 15px rgba(30, 29, 29, 0.3); /* Adds a stronger shadow for more depth */
+}
+
+/* Shrink effect when scrolling */
+.classic-header.shrink {
+  padding: 10px 0; /* Reduces padding when scrolled */
+  background-color: rgba(198, 198, 217, 0); /* Darkens the background when scrolled */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  /* Hamburger menu styles */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 4px;
+    background-color: rgb(222, 209, 209);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Show nav links when menu is open */
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    display: none; /* Hidden by default on mobile */
+  }
+}
+.classic-header.shrink .header-content {
+  padding-bottom: 1px; /* Reduced bottom padding of content */
+}
+/* Body padding to avoid overlap */
+body {
+  padding-top: 80px; /* Ensure content doesn't overlap the fixed navbar */
+}
+
+
+/* Main Content */
+.main-content {
+  
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-image: url('https://theeinsteinschool.com/wp-content/uploads/2023/08/new-2023date.jpg');
+  background-size: cover; /* Ensure the image always covers the section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 100px 100px; /* Padding inside the section */
+  color: white; /* White text color for readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Slight shadow to text for contrast */
+  display: flex;
+   
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: center;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #1a1a2e;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Language Section with Background */
+
+
+.language-section-bg .overlay {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 800px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.language-section-bg .overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.language-section-bg .overlay p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+/* Culture Section */
+.culture-section {
+  background: #fff8e7;
+  padding: 30px 20px;
+  border-left: 5px solid #ffcd3c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #1a1a2e;
+  color: white;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+
+
+
+.language-section-bg h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.language-section-bg p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.language-section-bg p em {
+  color: #ffcc99;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.language-section-bg p strong {
+  color: #ffddcc;
+}
+
+.culture-section {
+  width: 96.5%; /* Ensure it takes the full width of its container */
+  height: 800px; /* Adjust the height as needed */
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/287eab66-0f73-4b97-8e74-849c5f06d542/dcok5xg-aa7f6c93-4ffc-47c6-88dd-1866eea76fed.jpg/v1/fill/w_1053,h_759,q_70,strp/store_front_iii_by_anthonypresley_dcok5xg-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MiIsInBhdGgiOiJcL2ZcLzI4N2VhYjY2LTBmNzMtNGI5Ny04ZTc0LTg0OWM1ZjA2ZDU0MlwvZGNvazV4Zy1hYTdmNmM5My00ZmZjLTQ3YzYtODhkZC0xODY2ZWVhNzZmZWQuanBnIiwid2lkdGgiOiI8PTE1MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.UZyaT53xhrLIXG8hRa88dl6Uzs4YgriSOLQLCa9RwmQ'); /* Replace with your image path */
+  background-size: cover; /* Makes sure the image covers the section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 20px; /* Optional: Add some padding inside the section */
+  color: white; /* Optional: Makes text readable on a dark background */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: Adds a subtle shadow to text for better visibility */
+}
+.culture-section h2, .culture-section p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow for better visibility */
+}
+.content-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay for text readability */
+  padding: 20px; /* Adds padding around the content */
+  border-radius: 10px; /* Optional: Gives the container rounded corners */
+  text-align: center; /* Centers the text */
+}
+
+.glass-text {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 72px;
+  padding: 20px;
+  color: rgb(223, 185, 13);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+}
+p.glass-text {
+  color: white; /* Change only the paragraph color */
+}
+
+.japanese-section {
+  width: 96.5%; /* Ensure it takes the full width of its container */
+  height: 800px; /* Adjust the height as needed */
+  background-image: url('https://www.worldatlas.com/r/w1200/upload/71/b5/01/shutterstock-368779823.jpg');/*lace with your image path */
+  background-size: cover; /* Makes sure the image covers the section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 20px; /* Optional: Add some padding inside the section */
+  color: white; /* Optional: Makes text readable on a dark background */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+
+.glass-heading, .glass-paragraph {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 800px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.glass-heading {
+  color: white;
+  font-size: 2.2rem;
+}
+
+.glass-paragraph {
+  color: #ffcd3c; /* Gold or any other color */
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+.sample-quiz {
+  width: 96.5%; /* Ensure it takes the full width of its container */
+  height: 650px; /* Adjust the height as needed */
+  background-image: url('https://wallpaperaccess.com/full/1872.jpg');/*lace with your image path */
+  background-size: cover; /* Makes sure the image covers the section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 20px; /* Optional: Add some padding inside the section */
+  color: white; /* Optional: Makes text readable on a dark background */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+
+.glass-sq, .glass-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 800px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+.glass-sq {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.glass-button {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+em {
+  color: #e74c3c; /* Red for emphasis */
+  font-style: normal;
+}
+/* Stylish, Centered Button */
+.sample-quiz {
+  position: relative; /* Ensure the parent container is positioned for absolute positioning of the button */
+}
+
+.sample-quiz button {
+  padding: 20px 40px; /* Increased padding for a larger button */
+  font-size: 1.5rem; /* Increased font size */
+  background-color: rgba(68, 186, 195, 0.827); /* Transparent blue with opacity */
+  color: rgba(253, 204, 9, 0.936);
+  border: 2px solid #0d776e;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  position: absolute; /* Positioning the button */
+  bottom: 20px; /* 20px from the bottom */
+  right: 20px; /* 20px from the right */
+}
+
+.sample-quiz button:hover {
+  background-color: rgb(17, 134, 145); /* Solid blue on hover */
+  border-color: #d4e91f;
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.sample-quiz button:disabled {
+  background-color: #b0bec5; /* Gray when disabled */
+  border-color: #bdc3c7;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Icon inside button */
+.sample-quiz button .icon-start {
+  font-weight: bold;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .sample-quiz {
+    padding: 25px;
+    max-width: 100%;
+  }
+
+  .sample-quiz .glass-sq {
+    font-size: 1.5rem;
+  }
+
+  .sample-quiz .glass-button {
+    font-size: 0.9rem;
+  }
+
+  .sample-quiz button {
+    width: 60%; /* Adjusted width to ensure the button stays in the bottom-right on mobile */
+    font-size: 1.2rem; /* Slightly larger font size for mobile */
+    bottom: 10px; /* Adjust bottom position on smaller screens */
+    right: 10px; /* Adjust right position on smaller screens */
+  }
+}
+
+footer {
+  background-color: #1d1d1d; /* Dark background for a professional, classic look */
+  color: #e1e1e1; /* Light gray text for better readability */
+  text-align: center;
+  padding: 20px 0; /* Adequate padding for a spacious, elegant feel */
+  font-family: 'Georgia', serif; /* Serif font for a more traditional, classy feel */
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border-top: 2px solid #3a3a3a; /* Subtle border for added sophistication */
+}
+
+footer a {
+  color: #f1c40f; /* Gold accent for links (e.g., for a 'Privacy Policy' link) */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #d4ac0d; /* Slightly darker gold on hover */
+  text-decoration: underline; /* Underline effect on hover for a refined interaction */
+}
+
+

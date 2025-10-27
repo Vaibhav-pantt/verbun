@@ -1,0 +1,94 @@
+<header class="classic-header">
+  <div class="container">
+    <h1 class="logo">Verbun</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </div>
+</header>
+
+<style>
+.classic-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+  border-bottom: 2px solid #d5b042;
+  background-color: rgba(39, 52, 52, 0.8);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.classic-header .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo { font-family: Georgia, serif; font-size: 2rem; color: #eeb816; }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a { text-decoration: none; color: #fff; }
+
+.hamburger { display: none; font-size: 2rem; cursor: pointer; color: #eeb816; }
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+  .hamburger { 
+    display: block; 
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: -250px;
+    width: 200px;
+    height: calc(40vh - 60px);
+    flex-direction: column;
+    background-color: rgba(39, 52, 52, 0.4); /* semi-transparent */
+    backdrop-filter: blur(10px);           /* glass blur */
+    -webkit-backdrop-filter: blur(10px);   /* for Safari */
+    gap: 20px;
+    padding: 20px;
+    transition: right 0.3s ease;
+    display: flex;
+    z-index: 998;
+    border-radius: 10px;                   /* optional: rounded edges */
+    border: 1px solid rgba(255,255,255,0.2); /* subtle border for glass effect */
+  }
+
+  .nav-links.active { 
+    right: 0; 
+  }
+}
+
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+});
+</script>
